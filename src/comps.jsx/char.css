@@ -1,0 +1,127 @@
+.char-page{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(115deg,rgb(177, 171, 128) 0%, rgba(253, 187, 45, 1) 100%);;
+  color: #561919;
+}
+
+.char-header {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+  color: #ebd426;
+  overflow: hidden;
+  position: relative;
+}
+
+.char-logo{
+  height: 15vh;
+    margin: 2vh;
+
+  cursor:pointer;
+  transition: transform 0.2s ease;
+}
+.char-logo:hover{
+  transform: scale(1.1);  
+}
+
+.char-main{
+  height: 70vh;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.char-img{
+  height: 40vh;
+  margin: 2vh;
+  width: auto;
+  align-self: flex-start;
+}
+.char-info{
+  width: 60vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+#super-title{
+  color: #ebd426;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.char-subtitle{
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Fontdiner Swanky", serif;
+
+}
+.char-fotos {
+    width: 40vw;
+    height: 70vh;
+/*     //background-color: brown;
+ */    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 50vw;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    height : 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 13px;
+}
+
+.mySwiper .swiper-slide-active img {
+    position: relative;
+    right: 10px;
+}
+
+.data-char{
+  display: flex;
+  height: 10vh;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* md screen */
+@media (min-width: 768px) {
+    .swiper-button-prev {
+        transform: translate(-200px);
+    }
+
+    .swiper-button-next {
+        transform: translate(200px);
+    }
+}

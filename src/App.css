@@ -1,11 +1,212 @@
-.header {
-  height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
+:root{
+  --max-width:1200px;
+  font-family: "Cherry Cream Soda", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  --red: #be1e2d;
+  --blue: #0000ff;
+  --green: #00ff00;
+  --yellow: #dca54a;
+  --white: #ffffff;
+  --black: #000000;
+  --orange: #ff7f00;
+  
+}
+p {
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+*{box-sizing:border-box}
+
+body,html,#root{height:100%;margin:0}
+
+.Home{
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color:#111;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  font-size: 2.2vh;;
+  background: #ebd426;
+  background: linear-gradient(115deg, rgba(235, 212, 38, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
 
-.logo-header {
-  height: 10vh;
+/* HERO */
+.hero{
+  position:relative;
+  height:60vh; 
+  min-height:360px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  overflow:hidden;
+}
+
+/* subtle dark gradient to boost foreground contrast */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+  z-index:1;
+}
+
+.hero-content{
+  position:relative; /* sits above the overlay */
+  z-index:2;
+  text-align:center;
+  padding:1rem;
+  display:flex;
+  align-items:center;
+  
+  gap:0.5rem;
+  max-width:var(--max-width);
+  width:100%;
+}
+
+.logo-intro{
+  width:auto;
+  height:30vh;
+
+}
+
+.title{
+  color: #ebd426;
+  margin:auto;
+  font-size:clamp(1.25rem, 5vw, 2.25rem);
+  letter-spacing:0.02em;
+  text-transform:uppercase;
+  text-shadow:0 3px 18px rgba(0,0,0,0.45);
+  font-family: "Fontdiner Swanky", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.social-top{
+  position:absolute;
+  top:1rem;
+  right:1rem;
+  display:flex;
+  gap:0.75rem;
+  z-index:3;
+}
+.social-top svg{
+  color:#fff;
+  width:4vw;
+  height:4vw;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+  cursor:pointer;
+  transition: transform 0.2s ease;
+}
+.social-top svg:hover{
+  transform: scale(1.1);
+}
+.subtitle{
+  color:rgba(29, 24, 24, 0.95);
+  margin:0;
+  font-size:clamp(0.9rem, 2.5vw, 1.05rem);
+  opacity:0.95;
+}
+
+/* container and footer basics */
+.container{
+  flex:1;
+  max-width:var(--max-width);
+  padding:0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro{
+  height: 40vh;
+  width: 80%;
+  max-width:var(--max-width);
+  text-align:center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:10vw;
+}
+.intro-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.data-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+}
+
+
+.personajes{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:2rem;
+  height: 30vh;
+}
+
+.bottom{
+  width: 70%;
+  height: 30vh;
+  max-width:var(--max-width);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+
+.personaje {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 12%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: #111;
+}
+.main-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh; 
+}
+
+.footer{
+  text-align:center;
+  padding:1rem 0;
+  background:linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
+}
+
+/* Responsive tweaks */
+@media (min-width:900px){
+  .hero{
+    height:70vh;
+    min-height:480px;
+  }
+  .logo-header{
+    width:150px;
+  }
+}
+
+/* Utility: dark-mode-friendly */
+@media (prefers-color-scheme: dark){
+  .app{color:#140505}
 }

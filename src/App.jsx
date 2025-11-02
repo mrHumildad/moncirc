@@ -1,24 +1,33 @@
-import { useState } from 'react'
+import { useState } from "react";
+import Super from "./comps.jsx/Super.jsx";
+import Home from "./comps.jsx/Home.jsx";
 
-import './App.css'
+const App = () => {
+  const [currentPage, setCurrentPage] = useState('Home');
 
-const App =() =>{
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'Super':
+        return <Super setCurrentPage={setCurrentPage}/>;
+      case 'Magicus':
+        return <Magicus setCurrentPage={setCurrentPage}/>;
+      case 'Nadals':
+        return <Nadals setCurrentPage={setCurrentPage}/>;
+      case 'Impro':
+        return <Impro setCurrentPage={setCurrentPage}/>;
+      case 'Home':
+      default:
+        return <Home setCurrentPage={setCurrentPage}/>;
+    }
+  };
 
   return (
-    <div className='app'>
-      <div className="header">
-        <img src="src/assets/logo_header.png" alt="logo" className='logo-header'/>
-        <span className="title">ESPECTACLES I ACTIVITATS PER TOTHOM</span>
-        <div className="nav-button">X</div>
-      </div>
-      <div className="container">
-
-      </div>
-      <div className="footer">
-
-      </div>
+    <div>
+      <main>
+        {renderPage()}
+      </main>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
