@@ -17,6 +17,13 @@
   overflow: hidden;
   position: relative;
 }
+#super-title{
+  color: #ebd426;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .char-logo{
   height: 15vh;
@@ -58,11 +65,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 5vh;
-  
 }
 .char-subtitle{
-  font-size: 1.5rem;
   font-weight: 400;
   font-style: normal;
   font-family: "Fontdiner Swanky", serif;
@@ -108,11 +112,16 @@
     right: 10px;
 }
 
+.swiper-button-next, .swiper-button-prev {
+    display: none !important;
+}
+
 .data-char{
   display: flex;
   height: 10vh;
   gap: 1rem;
   align-items: center;
   justify-content: space-evenly;
+  font-size: 0.8rem;
 }
 

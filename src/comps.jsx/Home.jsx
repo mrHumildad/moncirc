@@ -24,30 +24,32 @@ const Home = ({setCurrentPage}) => {
       <main className="container">
         <section className="intro">
           <img src={logo} alt="Mon Circ" className="logo-intro" />
-          <span className='intro-text'>
-            Aquí trobaràs tota la informació sobre els meus espectacles i activitats. Si busques
-            diversió, rialles i moments inoblidables, has arribat al lloc correcte! baixa per descubrir els meus personatges!
+          <div className='intro-text'>
+            <p>
+              Aquí trobaràs tota la informació sobre els meus espectacles i activitats. Si busques
+              diversió, rialles i moments inoblidables, has arribat al lloc correcte! baixa per descubrir els meus personatges!
+            </p>
           <FontAwesomeIcon icon={faCircleDown} beat/>
-          </span>
+          </div>
         </section>
 
         <section className='personajes'>
-          <div className="personaje" onClick={() => setCurrentPage('Super')} id="superLink"></div>
+          <div className="personaje" onClick={() => setCurrentPage('Super')} id="superLink"><h4 className="personaje-title" id='superLink-title'>SUPER SPAGUETI</h4></div>
           <div className="personaje" id="magicusLink"></div>
           <div className="personaje" id="improvistosLink"></div>
           <div className="personaje" id="nadalLink"></div>
         </section>
 
         <section className='bottom'>
-          <span className="main-text">
-            <span className="parraph">
+          <div className="main-text">
+            <p className="parraph">
               Els espectacles i tallers de Mon Circ destaquen per ser dinàmics, participatius i adaptables a qualsevol context: carrers i places, teatres, festivals, esdeveniments familiars o programacions culturals. L’objectiu és clar: generar rialles, emoció i records inesborrables tant en infants com en adults.
-            </span>
-            <span className="parraph">
+            </p>
+            <p className="parraph">
               Amb una proposta fresca i capaç d’arribar a tots els públics que uneix circ, teatre i màgia, Mon Circ ofereix un segell de qualitat i professionalitat.
-            </span>
+            </p>
 
-          </span>
+          </div>
         </section>
       </main>
 

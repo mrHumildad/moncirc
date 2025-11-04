@@ -11,7 +11,7 @@ const Super = ({setCurrentPage}) => {
     <div className='char-page'>
       <div className="char-header">
         <img src={logo} alt="Mon Circ" className="char-logo" onClick={()=>setCurrentPage('Home')}/>
-        <div id="super-title" className="title">SUPER SPAGUETI</div>
+        <h1 id="super-title" className="title">SUPER SPAGUETI</h1>
         <img className="char-img" src={superTrans} alt="" />
       </div>
 
@@ -20,9 +20,9 @@ const Super = ({setCurrentPage}) => {
           <SwiperComponent />
         </div>
         <div className="char-info">
-          <span className="char-subtitle">
+          <h3 className="char-subtitle">
             Un superheroi del circ… amb molta salsa!
-          </span>
+          </h3>
           <p className="char-text">
             Un espectacle ple d’energia on el circ es barreja amb l’humor més absurd per donar vida a un personatge tan sorprenent com divertit. Malabars impossibles, situacions còmiques i una interacció constant amb el públic converteixen cada funció en una experiència única i inoblidable.
           </p>

@@ -12,6 +12,23 @@
   --orange: #ff7f00;
   
 }
+body,html,#root{
+  height:100%;
+  margin:0;
+  padding:0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+h3 {
+    display: block;
+    font-size: 1.3em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
 p {
     display: block;
     margin-block-start: 0px;
@@ -22,23 +39,21 @@ p {
 }
 *{box-sizing:border-box}
 
-body,html,#root{height:100%;margin:0}
 
 .Home{
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   color:#111;
   display:flex;
   flex-direction:column;
-  min-height:100vh;
-  font-size: 2.2vh;;
+  min-height:100dvh;
   background: #ebd426;
   background: linear-gradient(115deg, rgba(235, 212, 38, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
 
 /* HERO */
-.hero{
+/* .hero{
   position:relative;
-  height:60vh; 
+  height:60dvh; 
   min-height:360px;
   display:flex;
   align-items:center;
@@ -47,6 +62,61 @@ body,html,#root{height:100%;margin:0}
   background-position:center;
   background-repeat:no-repeat;
   overflow:hidden;
+} */
+.hero {
+  position: relative;
+  height: 60vh;
+  height: 60svh;
+  height: 60lvh;
+  height: 60dvh;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.intro {
+  height: 40vh;
+  height: 40svh;
+  height: 40lvh;
+  height: 40dvh;
+  width: 80%;
+  max-width: var(--max-width);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10dvw;
+}
+
+.personajes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  height: 30vh;
+  height: 30svh;
+  height: 30lvh;
+  height: 30dvh;
+}
+
+.bottom {
+  width: 70%;
+  height: 30vh;
+  height: 30svh;
+  height: 30lvh;
+  height: 30dvh;
+  max-width: var(--max-width);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
 }
 
 /* subtle dark gradient to boost foreground contrast */
@@ -72,14 +142,14 @@ body,html,#root{height:100%;margin:0}
 
 .logo-intro{
   width:auto;
-  height:30vh;
+  height:30dvh;
 
 }
 
 .title{
   color: #ebd426;
   margin:auto;
-  font-size:clamp(1.25rem, 5vw, 2.25rem);
+  /* font-size:clamp(1.25rem, 5dvw, 2.25rem); */
   letter-spacing:0.02em;
   text-transform:uppercase;
   text-shadow:0 3px 18px rgba(0,0,0,0.45);
@@ -87,18 +157,24 @@ body,html,#root{height:100%;margin:0}
   font-weight: 400;
   font-style: normal;
 }
-.social-top{
-  position:absolute;
-  top:1rem;
-  right:1rem;
-  display:flex;
-  gap:0.75rem;
-  z-index:3;
+.social-top {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  z-index: 3;
+  inset-inline-end: 1rem;
+  inset-block-start: 1rem;
+  max-width: calc(100% - 2rem);
+  overflow: visible;
+  pointer-events: auto;
 }
+
 .social-top svg{
   color:#fff;
-  width:4vw;
-  height:4vw;
+  width:4dvw;
+  height:4dvw;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
   cursor:pointer;
   transition: transform 0.2s ease;
@@ -109,7 +185,7 @@ body,html,#root{height:100%;margin:0}
 .subtitle{
   color:rgba(29, 24, 24, 0.95);
   margin:0;
-  font-size:clamp(0.9rem, 2.5vw, 1.05rem);
+  font-size:clamp(0.9rem, 2.5dvw, 1.05rem);
   opacity:0.95;
 }
 
@@ -124,8 +200,8 @@ body,html,#root{height:100%;margin:0}
   margin: auto;
 }
 
-.intro{
-  height: 40vh;
+/* .intro{
+  height: 40dvh;
   width: 80%;
   max-width:var(--max-width);
   text-align:center;
@@ -133,8 +209,8 @@ body,html,#root{height:100%;margin:0}
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap:10vw;
-}
+  gap:10dvw;
+} */
 .intro-text{
   display: flex;
   flex-direction: column;
@@ -145,35 +221,35 @@ body,html,#root{height:100%;margin:0}
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1vh;
+  gap: 1dvh;
 }
 
 
-.personajes{
+/* .personajes{
   display:flex;
   justify-content:center;
   gap:2rem;
-  height: 30vh;
-}
-
+  height: 30dvh;
+} */
+/* 
 .bottom{
   width: 70%;
-  height: 30vh;
+  height: 30dvh;
   max-width:var(--max-width);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
-}
+  padding-bottom: 2rem;
+} */
 
 
 .personaje {
-  width: 20vw;
-  height: 20vw;
-  max-width: 25vh;
-  max-height: 25vh;
+  width: 20dvw;
+  height: 20dvw;
+  max-width: 25dvh;
+  max-height: 25dvh;
   border-radius: 12%;
   background-size: cover;
   background-position: center;
@@ -186,19 +262,19 @@ body,html,#root{height:100%;margin:0}
 }
 
 #superLink {
-  border: 1vw solid var(--red);
+  border: 1dvw solid var(--red);
 }
 
 #magicusLink {
-  border: 1vw solid var(--blue);
+  border: 1dvw solid var(--blue);
 }
 
 #improvistosLink {
-  border: 1vw solid var(--orange);
+  border: 1dvw solid var(--orange);
 }
 
 #nadalLink {
-  border: 1vw solid var(--green);
+  border: 1dvw solid var(--green);
 }
 
 .personaje:hover {
@@ -211,7 +287,7 @@ body,html,#root{height:100%;margin:0}
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3vh; 
+  gap: 3dvh; 
 }
 
 .footer{
@@ -221,3 +297,22 @@ body,html,#root{height:100%;margin:0}
 }
 
 
+.personaje-title{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-family: "Fontdiner Swanky", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: clamp(0.8rem, 2dvw, 1.2rem);
+}
+
+#superLink-title{
+  color: var(--red);
+  font-family: "Fontdiner Swanky", serif;
+}
