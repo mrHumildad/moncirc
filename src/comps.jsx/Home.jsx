@@ -17,7 +17,7 @@ const Home = ({setCurrentPage}) => {
       </div>
         <div className="hero-overlay" aria-hidden="true" />
         <div className="hero-content">
-          <h1 className="title">ESPECTACLES I ACTIVITATS PER TOTHOM</h1>
+          <h1 className="title">ESPECTACLES I RISAS PER TOTHOM</h1>
         </div>
       </header>
 
