@@ -1,11 +1,15 @@
 :root{
-  font-family: "Cherry Cream Soda", system-ui;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
   --red: #be1e2d;
   --blue: #0000ff;
-  --green: #00ff00;
+  --green: #145714;
   --yellow: #dca54a;
+  --dark-yellow: #dca44ae3;
   --white: #ffffff;
   --black: #000000;
   --orange: #ff7f00;
@@ -108,7 +112,6 @@ p {
 
 
 .Home{
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   color:#111;
   display:flex;
   flex-direction:column;
@@ -222,15 +225,17 @@ p {
 }
 
 .title{
-  color: #ebd426;
+  color: var(--dark-yellow);
   margin:auto;
 
   /* font-size:clamp(1.25rem, 5dvw, 2.25rem); */
   letter-spacing:0.02em;
   text-transform:uppercase;
-  text-shadow:0 3px 18px rgba(0,0,0,0.45);
-  font-family: "Fontdiner Swanky", serif;
+  text-shadow:0 8px 28px rgba(0,0,0,0.45);
+  font-family: "Rubik Dirt", system-ui;
   font-weight: 400;
+  font-style: normal;
+
 }
 .social-top {
   position: absolute;
@@ -388,7 +393,7 @@ p {
 }
 .superLink-title{
   color: var(--red);
-  font-family: "Fontdiner Swanky", serif;
+  font-family: "Bigelow Rules", serif;
 }
 .mobile {
   display: none;
@@ -403,6 +408,10 @@ p {
   .intro {
     height: auto;
     margin: 5vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;  
   }
   .personajes {
     height: auto;
