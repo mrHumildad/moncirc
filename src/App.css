@@ -1,5 +1,4 @@
 :root{
-  --max-width:1200px;
   font-family: "Cherry Cream Soda", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -113,7 +112,6 @@ p {
   color:#111;
   display:flex;
   flex-direction:column;
-  min-height:100dvh;
   background: #ebd426;
   background: linear-gradient(115deg, rgba(235, 212, 38, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
@@ -162,9 +160,18 @@ p {
   gap: 10dvw;
 }
 
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
 .personajes {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   height: 30vh;
   height: 30svh;
@@ -314,8 +321,8 @@ p {
 
 
 .personaje {
-  width: 20dvw;
-  height: 20dvw;
+  width: 22dvw;
+  height: 22dvw;
   max-width: 25dvh;
   max-height: 25dvh;
   border-radius: 50%;
@@ -330,24 +337,25 @@ p {
 }
 
 #superLink {
-  border: 1dvw solid var(--red);
+  border: 0.3dvw solid var(--red);
 }
 
 #magicusLink {
-  border: 1dvw solid var(--blue);
+  border: 0.3dvw solid var(--blue);
 }
 
 #improvistosLink {
-  border: 1dvw solid var(--orange);
+  border: 0.3dvw solid var(--orange);
 }
 
 #nadalLink {
-  border: 1dvw solid var(--green);
+  border: 0.3dvw solid var(--green);
 }
 
 .personaje:hover {
   transform: scale(1.05) rotate(15deg);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  border-width: 0.6vw;
   border-radius: 12%;
 }
 
@@ -366,22 +374,57 @@ p {
 }
 
 
-.personaje-title{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+.personaje-title, .personaje-title-mobile{
   color: #fff;
   text-align: center;
-  padding: 0.5rem 0;
   font-family: "Fontdiner Swanky", serif;
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
-  font-size: clamp(0.8rem, 2dvw, 1.2rem);
 }
-
-#superLink-title{
+.personaje-title{
+  position: absolute;
+  bottom: 0;
+}
+.superLink-title{
   color: var(--red);
   font-family: "Fontdiner Swanky", serif;
+}
+.mobile {
+  display: none;
+}
+@media only screen and (orientation: portrait) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  } 
+  .intro {
+    height: auto;
+    margin: 5vw 0;
+  }
+  .personajes {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+  .pers-container {
+    height: auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .personaje {
+    width: 60dvh;
+    height: 60dvh;
+  }
+  .bottom {
+    height: auto;
+    margin: 5vw 0;
+  }
 }
