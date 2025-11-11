@@ -46,6 +46,15 @@ const Magicus = () => {
           </p>
         </div>
       </div>
+      <div className="video-wrapper">
+  <iframe
+    src="https://www.youtube.com/embed/Sf-bqgnyG_0?si=wBxXTbMDiCBGL4kd"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  ></iframe>
+</div>
 
     <div className="data-char">
       <span className="data-block"><span className="data-key">Durada: </span><span className="data-value">40/50 minuts</span></span>
