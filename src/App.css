@@ -297,12 +297,7 @@ p {
   align-items: center;
   justify-content: center;
 }
-.data-block{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1dvh;
-}
+
 
 
 /* .personajes{

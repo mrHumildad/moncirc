@@ -7,10 +7,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-import super6 from '../assets/fotos_uri/Super6.png';
-import super7 from '../assets/fotos_uri/Super7.png';
-import super8 from '../assets/fotos_uri/Super8.png';
-import super9 from '../assets/fotos_uri/Super9.png';
+
 //import "./styles.css";
 import {
     Autoplay,
@@ -19,7 +16,7 @@ import {
     Navigation,
 } from "swiper/modules";
 
-const SwiperComponent = () => {
+const SwiperComponent = ({pics}) => {
     return (
         <Swiper
             effect={"coverflow"}
@@ -44,7 +41,12 @@ const SwiperComponent = () => {
             navigation={true}
             modules={[Autoplay, EffectCoverflow, Pagination, Navigation]}
             className="mySwiper">
-            <SwiperSlide>
+              {pics && pics.length > 0 ? pics.map((pic, index) => (
+            <SwiperSlide key={index}>
+                <img src={pic} alt={`slide ${index + 1}`} />
+            </SwiperSlide>
+        )) : ( null ) } 
+            {/* <SwiperSlide>
                 <img src={super6} alt="slide 1" />
             </SwiperSlide>
             <SwiperSlide>
@@ -58,7 +60,7 @@ const SwiperComponent = () => {
             </SwiperSlide>
             <SwiperSlide>
                 <img src={super7} alt="slide 5" />
-            </SwiperSlide>
+            </SwiperSlide> */}
         </Swiper>
     );
 };

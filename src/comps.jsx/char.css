@@ -1,6 +1,6 @@
 .char-page{
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   overflow: hidden;
   background: linear-gradient(115deg,rgb(177, 171, 128) 0%, rgba(253, 187, 45, 1) 100%);;
   color: #561919;
@@ -12,21 +12,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: red;
-  color: #ebd426;
+  
   overflow: hidden;
   position: relative;
 }
+#super-header {
+  background-color: var(--red);
+  color: var(--dark-yellow);
+}
 #super-title{
-  color: #ebd426;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .char-logo{
-  height: 15vh;
+  height: 6vh;
   margin: 2vh;
   cursor:pointer;
   transition: transform 0.2s ease;
@@ -36,7 +39,8 @@
 }
 
 .char-main{
-  height: 70vh;
+  height: auto;
+  padding: 2vh;;
   width: 100%;
   display:flex;
   justify-content: center;
@@ -58,17 +62,11 @@
   padding-right: 2vw;
 }
 
-#super-title{
-  color: #ebd426;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 .char-subtitle{
   font-weight: 400;
   font-style: normal;
-  font-family: "Fontdiner Swanky", serif;
+  font-family: "Rubik Dirt", system-ui;
 
 }
 .char-fotos {
@@ -118,9 +116,12 @@
 .data-char{
   display: flex;
   height: 10vh;
-  gap: 1rem;
   align-items: center;
   justify-content: space-evenly;
   font-size: 0.8rem;
 }
-
+.data-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
