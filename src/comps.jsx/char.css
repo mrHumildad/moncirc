@@ -1,11 +1,30 @@
+:root{
+  --super-font: 'Bangers', cursive;
+  --magicus-font: 'Bigelow Rules', cursive;
+}
+
 .char-page{
   width: 100%;
   height: auto;
   overflow: hidden;
-  background: linear-gradient(115deg,rgb(177, 171, 128) 0%, rgba(253, 187, 45, 1) 100%);;
-  color: #561919;
+  
 }
-
+#super-page {
+  background: linear-gradient(115deg,rgb(177, 171, 128) 0%, rgba(253, 187, 45, 1) 100%);;
+  color: var(--dark-red);
+}
+#magicus-page {
+  background: linear-gradient(115deg, rgba(173, 216, 230, 1) 0%, rgba(135, 206, 235, 1) 100%);
+  color: var(--dark-yellow);
+}
+#impro-page {
+  background: linear-gradient(115deg, rgba(144, 238, 144, 1) 0%, rgba(60, 179, 113, 1) 100%);
+  color: var(--dark-yellow);
+}
+#nadal-page {
+  background: linear-gradient(115deg, rgba(144, 238, 144, 1) 0%, rgba(255, 99, 71, 1) 100%);
+  color: var(--dark-red);
+}
 .char-header {
   height: 20vh;
   width: 100%;
@@ -20,14 +39,29 @@
   background-color: var(--red);
   color: var(--dark-yellow);
 }
-#super-title{
+
+#nadal-header {
+  background-color: var(--green);
+  color: var(--red);
+}
+
+#impro-header {
+  background-color: var(--green);
+  color: var(--dark-yellow);
+}
+
+#magicus-header {
+  background-color: var(--blue);
+  color: var(--dark-yellow);
+}
+.char-title{
   position: absolute;
+  font-family: var(--super-font);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
 .char-logo{
   height: 6vh;
   margin: 2vh;
@@ -46,9 +80,15 @@
   justify-content: center;
   align-items: center;
 }
-.char-img{
-  height: 40vh;
-  margin: 2vh;
+.char-img-left{
+  height: 20vh;
+  margin: 2vh 0 0 2vh;
+  width: auto;
+  align-self: flex-start;
+}
+.char-img-right{
+  height: 20vh;
+  margin: 2vh 2vh 0 0;
   width: auto;
   align-self: flex-start;
 }

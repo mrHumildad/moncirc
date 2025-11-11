@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom'
 import '../App.css'
 import logo from '../assets/logo.png'
 import hero from '../assets/hero.jpg'
+import superCover from '../assets/covers/super.png'
+import magicusCover from '../assets/covers/magicus.png'
+import improCover from '../assets/covers/impro.png'
+import nadalCover from '../assets/covers/nadal.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareInstagram, faSquareFacebook, faSquareXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faCircleDown } from '@fortawesome/free-solid-svg-icons'
@@ -64,28 +68,28 @@ const Home = () => {
 
         <section className="personajes" ref={personajesRef}>
           <div className="pers-container">
-            <div className="personaje" onClick={() => navigate('/super')} id="superLink">
+            <div style={{ backgroundImage: `url(${superCover})` }} className="personaje" onClick={() => navigate('/super')} id="superLink" >
               <h4 className="personaje-title desktop superLink-title">SUPER SPAGUETI</h4>
             </div>
             <h4 className="personaje-title-mobile mobile superLink-title">SUPER SPAGUETI</h4>
           </div>
 
           <div className="pers-container">
-            <div className="personaje" onClick={() => navigate('/magicus')} id="magicusLink">
+            <div style={{ backgroundImage: `url(${magicusCover})` }} className="personaje" onClick={() => navigate('/magicus')} id="magicusLink">
               <h4 className="personaje-title desktop magicusLink-title">MAGICUS</h4>
             </div>
             <h4 className="personaje-title-mobile mobile magicusLink-title">MAGICUS</h4>
           </div>
 
           <div className="pers-container">
-            <div className="personaje" onClick={() => navigate('/impro')} id="improvistosLink">
+            <div style={{ backgroundImage: `url(${improCover})` }}className="personaje" onClick={() => navigate('/impro')} id="improvistosLink">
               <h4 className="personaje-title desktop improvistosLink-title">IMPROVISTOS</h4>
             </div>
             <h4 className="personaje-title-mobile mobile improvistosLink-title">IMPROVISTOS</h4>
           </div>
 
           <div className="pers-container">
-            <div className="personaje" onClick={() => navigate('/nadals')} id="nadalLink">
+            <div style={{ backgroundImage: `url(${nadalCover})` }} className="personaje" onClick={() => navigate('/nadal')} id="nadalLink">
               <h4 className="personaje-title desktop nadalLink-title">NADAL</h4>
             </div>
             <h4 className="personaje-title-mobile mobile nadalLink-title">NADAL</h4>

@@ -1,24 +1,33 @@
-import React from 'react';
+import {useMemo} from 'react';
 import './char.css';
 import logo from '../assets/logo_yellow.png';
 import { useNavigate } from "react-router-dom";
-
+import headPic1 from '../assets/header/magicus1.png';
+import headPic2 from '../assets/header/magicus2.png';
 // Import images explicitly
 
 import SwiperComponent from './Swiper';
 const Magicus = () => {
+  const images = useMemo(() => {
+      const modules = import.meta.glob("../assets/magicus/*.{png,jpg}", { eager: true });
+      // Convert to an array of URLs and sort alphabetically
+      return Object.keys(modules)
+        .sort()
+        .map((key) => modules[key].default);
+    }, []);
   const navigate = useNavigate();
   return (
-    <div className='char-page'>
-      <div className="char-header">
-        <img src={logo} alt="Mon Circ" className="char-logo" onClick={()=>navigate('/')}/>
-        <h1 id="magicus-title" className="title">MAGIC</h1>
-        {/* <img className="char-img" src={superTrans} alt="" /> */}
+    <div className='char-page' id='magicus-page'>
+      <div className="char-header" id ="magicus-header">
+        
+        <h1 id="magicus-title" className="char-title">MAGIC</h1>
+        <img className="char-img-left" src={headPic2} alt="" />
+        <img className="char-img-right" src={headPic1} alt="" />
       </div>
 
       <div className="char-main">
         <div className="char-fotos">
-          <SwiperComponent />
+          <SwiperComponent pics={images}/>
         </div>
         <div className="char-info">
           <h3 className="char-subtitle">
@@ -43,6 +52,7 @@ const Magicus = () => {
       <span className="data-block"><span className="data-key">Públic: </span><span className="data-value">Familiar</span></span>
       <span className="data-block"><span className="data-key">Espai: </span><span className="data-value">Interior / exterior</span></span>
       <span className="data-block"><span className="data-key">Idioma: </span><span className="data-value">Multilingüe / Gestual</span></span>
+      <img src={logo} alt="Mon Circ" className="char-logo" onClick={()=>navigate('/')}/>
     </div>
 
     </div>

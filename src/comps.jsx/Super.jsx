@@ -1,12 +1,8 @@
 import React from 'react';
 import './char.css';
 import logo from '../assets/logo.png';
-import headPic1 from '../assets/super/slaier/Super6.png';
-import headPic2 from '../assets/super/slaier/Pallasso.png';
-/* import super6 from '../assets/fotos_uri/Super6.png';
-import super7 from '../assets/fotos_uri/Super7.png';
-import super8 from '../assets/fotos_uri/Super8.png';
-import super9 from '../assets/fotos_uri/Super9.png'; */
+import headPic1 from '../assets/header/super1.png';
+import headPic2 from '../assets/header/super2.png';
 import { useNavigate } from "react-router-dom";
 import { useMemo } from "react";
 
@@ -21,12 +17,12 @@ const Super = () => {
   }, []);
   const navigate = useNavigate();
   return (
-    <div className='char-page'>
+    <div className='char-page' id='super-page'>
       <div id="super-header" className="char-header ">
         {/*  */}
-        <h1 id="super-title" className="title">SUPER SPAGUETI</h1>
-        <img className="char-img" src={headPic2} alt="" />
-        <img className="char-img" src={headPic1} alt="" />
+        <h1 id="super-title" className="char-title">SUPER SPAGUETI</h1>
+        <img className="char-img-left" src={headPic2} alt="" />
+        <img className="char-img-right" src={headPic1} alt="" />
       </div>
 
       <div className="char-main">
