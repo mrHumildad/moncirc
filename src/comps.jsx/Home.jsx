@@ -9,7 +9,7 @@ import improCover from '../assets/covers/impro.png'
 import nadalCover from '../assets/covers/nadal.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareInstagram, faSquareFacebook, faSquareXTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faCircleDown } from '@fortawesome/free-solid-svg-icons'
+import { faCircleDown, faSquareEnvelope, faSquarePhone } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
   const navigate = useNavigate()
@@ -32,6 +32,8 @@ const Home = () => {
     <div className="Home">
       <header className="hero" style={{ backgroundImage: `url(${hero})` }}>
         <div className="social-top">
+          <FontAwesomeIcon icon={faSquarePhone} />
+          <FontAwesomeIcon icon={faSquareEnvelope} />
           <FontAwesomeIcon icon={faSquareFacebook} />
           <FontAwesomeIcon icon={faSquareXTwitter} />
           <FontAwesomeIcon icon={faSquareInstagram} />
@@ -61,7 +63,7 @@ const Home = () => {
                 marginTop: '1rem',
               }}
             >
-              <FontAwesomeIcon icon={faCircleDown} beat size="2x" />
+              <FontAwesomeIcon className='desktop' icon={faCircleDown} beat size="2x" />
             </button>
           </div>
         </section>

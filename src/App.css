@@ -120,26 +120,12 @@ p {
   background: linear-gradient(115deg, rgba(235, 212, 38, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
 
-/* HERO */
-/* .hero{
-  position:relative;
-  height:60dvh; 
-  min-height:360px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  overflow:hidden;
-} */
 .hero {
   position: relative;
   height: 60vh;
   height: 60svh;
   height: 60lvh;
   height: 60dvh;
-  min-height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,10 +171,7 @@ p {
 
 .bottom {
   width: 70%;
-  height: 30vh;
-  height: 30svh;
-  height: 30lvh;
-  height: 30dvh;
+  height: auto;
   max-width: var(--max-width);
   text-align: center;
   display: flex;
@@ -330,10 +313,10 @@ p {
   background-size: cover;
   background-position: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-width 0.3s ease;
   cursor: pointer;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background-color: #111;
 }
 
@@ -374,18 +357,19 @@ p {
   background:linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
 }
 
-
-.personaje-title, .personaje-title-mobile{
-  color: #fff;
-  text-align: center;
-  font-family: "Fontdiner Swanky", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
-}
-.personaje-title{
+.personaje-title {
+  font-size: 6dvw;
   position: absolute;
-  bottom: 0;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+.personaje:hover .personaje-title {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 .superLink-title{
   color: var(--red);
@@ -396,18 +380,34 @@ p {
 }
 @media only screen and (orientation: portrait) {
   .mobile {
-    display: block;
+    display: block !important;
   }
   .desktop {
-    display: none;
-  } 
+    display: none !important;
+  }
+  .hero {
+    height: 40dvh;
+    position: relative;
+  }
+  .logo-intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%; 
+  width: auto;
+  opacity: 0.3; /* optional: make it subtle */
+  z-index: 0; /* behind everything */
+  pointer-events: none; /* ignore mouse events */
+}
   .intro {
     height: auto;
     margin: 5vw 0;
-    display: flex;
+    display:block;
     flex-direction: column;
     align-items: center;
     gap: 2rem;  
+    position: relative;
   }
   .personajes {
     height: auto;
@@ -419,7 +419,7 @@ p {
   }
   .pers-container {
     height: auto;
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -427,6 +427,10 @@ p {
   .personaje {
     width: 60dvh;
     height: 60dvh;
+  }
+  .personaje-title-mobile {
+    font-size: 4dvh;
+    
   }
   .bottom {
     height: auto;

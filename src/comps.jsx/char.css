@@ -3,7 +3,6 @@
   --magicus-font: 'Bigelow Rules', cursive;
 
 }
-
 .char-page{
   width: 100%;
   height: auto;
@@ -63,29 +62,31 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.char-logo{
-  height: 6vh;
-  margin: 2vh;
-  cursor:pointer;
-  transition: transform 0.2s ease;
-}
+
 .char-logo:hover{
   transform: rotate(-5deg) scale(1.1);  
 }
 
 .char-main{
   height: auto;
-  padding: 2vh;;
-  width: 100%;
+  width: 90%;
+  margin: auto;
+  padding-left: 1dvw;
   display:flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 .char-img-left{
   height: 20vh;
   margin: 2vh 0 0 2vh;
   width: auto;
   align-self: flex-start;
+}
+.char-logo{
+  height: 16vh;
+  width: auto;
+  margin: 2vh;
+  cursor:pointer;
+  transition: transform 0.2s ease;
 }
 .char-img-right{
   height: 20vh;
@@ -94,7 +95,7 @@
   align-self: flex-start;
 }
 .char-info{
-  width: 60vw;
+  width: 60%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -108,21 +109,18 @@
   font-weight: 400;
   font-style: normal;
   font-family: "Rubik Dirt", system-ui;
-
+  margin: auto;
+  text-align: center;
+  height: 10dvh;
 }
 .char-fotos {
-    width: 40vw;
+    width: 40%;
     height: 70vh;
-/*     //background-color: brown;
- */    display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
 }
-
-
-
 
 .swiper {
     width: 100%;
@@ -142,12 +140,12 @@
     height : 100%;
     width: 100%;
     object-fit: contain;
+    border: 0.5dvh solid var(--dark-yellow);
     border-radius: 13px;
 }
 
 .mySwiper .swiper-slide-active img {
     position: relative;
-    right: 10px;
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -181,4 +179,56 @@
   border: 0;
 }
 
-
+.cabalgadas-cont {
+  width: 90%;
+  margin: auto;
+  padding: 2vh 2vw;
+  text-align: center;
+}
+.cabalgada-img {
+  float: right;
+  width: 50%;
+  height: auto;
+  margin-bottom: 1vh;
+}
+@media only screen and (orientation: portrait) {
+  .char-logo{
+    height: 12vh;
+    margin: 1vh;
+  }
+  .char-header{
+    height: auto;
+    flex-direction: row;
+    padding: 1vh;
+    padding-right: 10vw;;
+    gap: 1vh;
+  }
+  .char-title{
+    position: static;
+    transform: none;
+  }
+  .char-info{
+    width: 100%;
+    padding: 0;
+  }
+  .char-subtitle{
+    height: auto;
+    margin: 2vh 0;
+  }
+  .char-fotos {
+      width: 100%;
+      height: auto;
+      margin-top: 2vh;
+  }
+  .data-char{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    flex-direction: column;
+    height: auto;
+    gap: 0.5vh;
+  }
+  .data-block{
+    flex-direction: row;
+    gap: 1.5vw;
+  }
+}

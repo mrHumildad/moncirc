@@ -19,20 +19,20 @@ const Magicus = () => {
   return (
     <div className='char-page' id='magicus-page'>
       <div className="char-header" id ="magicus-header">
-        
+        <img src={logo} alt="Mon Circ" className="char-logo" onClick={()=>navigate('/')}/>
         <h1 id="magicus-title" className="char-title">MAGIC</h1>
-        <img className="char-img-left" src={headPic2} alt="" />
+        {/* <img className="char-img-left" src={headPic2} alt="" /> */}
         <img className="char-img-right" src={headPic1} alt="" />
       </div>
-
+      <h3 className="char-subtitle">
+            Un superheroi del circ… amb molta salsa!
+      </h3>
       <div className="char-main">
         <div className="char-fotos">
           <SwiperComponent pics={images}/>
         </div>
         <div className="char-info">
-          <h3 className="char-subtitle">
-            Un superheroi del circ… amb molta salsa!
-          </h3>
+          
           <p className="char-text">
             Trucs que no surten, trucs que surten al revés i trucs que, de vegades, sí que surten… Quan res passa com estava previst, la màgia es transforma en un joc inesperat on la sorpresa i les rialles són les protagonistes.          </p>
           <p className="char-text">
@@ -61,7 +61,6 @@ const Magicus = () => {
       <span className="data-block"><span className="data-key">Públic: </span><span className="data-value">Familiar</span></span>
       <span className="data-block"><span className="data-key">Espai: </span><span className="data-value">Interior / exterior</span></span>
       <span className="data-block"><span className="data-key">Idioma: </span><span className="data-value">Multilingüe / Gestual</span></span>
-      <img src={logo} alt="Mon Circ" className="char-logo" onClick={()=>navigate('/')}/>
     </div>
 
     </div>
