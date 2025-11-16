@@ -377,7 +377,7 @@ p {
   font-size: 5dvw;
   text-align: center;
   text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white), 0 -1px var(--white);
-
+  z-index: 10;
   position: absolute;
   bottom: 0.5rem;
   left: 50%;
