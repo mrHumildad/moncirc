@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Scroll2Top from "./logics/Scroll2Top.jsx";
-import SplashScreen from "./comps.jsx/SplashScreen.jsx";
-import Home from "./comps.jsx/Home.jsx";
-import Super from "./comps.jsx/Super.jsx";
-import Magicus from "./comps.jsx/Magicus.jsx";
-import Nadal from "./comps.jsx/Nadal.jsx";
-import Impro from "./comps.jsx/Impro.jsx";
+import SplashScreen from "./comps/SplashScreen.jsx";
+import Home from "./comps/Home.jsx";
+import Super from "./comps/Super.jsx";
+import Magicus from "./comps/Magicus.jsx";
+import Nadal from "./comps/Nadal.jsx";
+import Impro from "./comps/Impro.jsx";
 
 const App = () => {
   const [showSplash, setShowSplash] = useState(true);
