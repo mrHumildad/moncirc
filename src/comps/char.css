@@ -126,6 +126,8 @@
   font-style: normal;
   font-family: var(--title-font);
   margin: auto;
+  margin-top: 3dvh;
+  margin-bottom: 3dvh;
   text-align: center;
   height: auto;
   display: flex;

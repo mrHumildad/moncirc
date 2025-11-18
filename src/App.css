@@ -264,6 +264,8 @@ p {
 .subtitle{
   color:rgba(29, 24, 24, 0.95);
   margin:0;
+
+  text-align:center;
   font-size:clamp(0.9rem, 2.5dvw, 1.05rem);
   opacity:0.95;
 }
@@ -375,6 +377,7 @@ p {
 
 .personaje-title {
   font-size: 5dvw;
+  line-height: 4dvw;;
   text-align: center;
   text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white), 0 -1px var(--white);
   z-index: 10;

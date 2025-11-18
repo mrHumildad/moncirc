@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import '../App.css'
 import logo from '../assets/logo.png'
 import hero from '../assets/hero.jpg'
-import superCover from '../assets/covers/super.png'
-import magicusCover from '../assets/covers/magicus.png'
-import improCover from '../assets/covers/impro.png'
+import superCover from '../assets/header/super2.png'
+import magicusCover from '../assets/header/magicus1.png'
+import improCover from '../assets/header/impro1.png'
 import nadalCover from '../assets/covers/nadal.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareInstagram, faSquareFacebook, faSquareXTwitter } from '@fortawesome/free-brands-svg-icons'
@@ -14,6 +14,10 @@ import { faCircleDown, faSquareEnvelope, faSquarePhone } from '@fortawesome/free
 const Home = () => {
   const navigate = useNavigate()
   const personajesRef = useRef(null)
+  const INSTAGRAM_URL = 'https://www.instagram.com/moncirc/'
+  const MAILTO = 'mailto:spaguetiespectacles@gmail.com'
+  const TEL = 'tel:+34623240415'
+  const WHATSAPP_URL = 'https://wa.me/34623240415'
 
   const scrollToPersonajes = (e) => {
     if (e?.preventDefault) e.preventDefault()
@@ -30,13 +34,62 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <header className="hero" style={{ backgroundImage: `url(${hero})` }}>
-        <div className="social-top">
-          <FontAwesomeIcon icon={faSquarePhone} />
-          <FontAwesomeIcon icon={faSquareEnvelope} />
-          <FontAwesomeIcon icon={faSquareFacebook} />
-          <FontAwesomeIcon icon={faSquareXTwitter} />
-          <FontAwesomeIcon icon={faSquareInstagram} />
+      <header className="hero" role="banner" aria-label="Hero banner" style={{ backgroundImage: `url(${hero})` }}>
+          <div className="social-top">
+          <FontAwesomeIcon
+            icon={faSquarePhone}
+            onClick={(e) => {
+              // Ctrl/Cmd + click opens WhatsApp, regular click opens phone dialer
+              if (e.ctrlKey || e.metaKey) {
+                window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')
+              } else {
+                window.location.href = TEL
+              }
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                window.location.href = TEL
+              } else if (e.key === 'w' || e.key === 'W') {
+                // quick keyboard shortcut to open WhatsApp when focused
+                window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer')
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Call +34 623240415 (Ctrl+click opens WhatsApp)"
+            style={{ cursor: 'pointer' }}
+          />
+          <FontAwesomeIcon
+            icon={faSquareEnvelope}
+            onClick={() => { window.location.href = MAILTO }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                window.location.href = MAILTO
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Send email to spaguetiespectacles@gmail.com"
+            style={{ cursor: 'pointer' }}
+          />
+          {/* <FontAwesomeIcon icon={faSquareFacebook} />
+          <FontAwesomeIcon icon={faSquareXTwitter} /> */}
+          <FontAwesomeIcon
+            icon={faSquareInstagram}
+            onClick={() => window.open(INSTAGRAM_URL, '_blank', 'noopener,noreferrer')}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                window.open(INSTAGRAM_URL, '_blank', 'noopener,noreferrer')
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Open Instagram (opens in a new tab)"
+            style={{ cursor: 'pointer' }}
+          />
         </div>
         <div className="hero-overlay" aria-hidden="true" />
         <div className="hero-content">
@@ -44,7 +97,7 @@ const Home = () => {
         </div>
       </header>
 
-      <main className="container">
+      <main className="container" role="main">
         <section className="intro">
           <img src={logo} alt="Mon Circ" className="logo-intro" />
           <div className="intro-text">

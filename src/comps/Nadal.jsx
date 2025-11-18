@@ -10,7 +10,7 @@ import cabalgadaPic from '../assets/nadal/aldino.png'
 import SwiperComponent from './Swiper';
 const Nadal = () => {
   const images = useMemo(() => {
-      const modules = import.meta.glob("../assets/nadal/*.{png,jpg}", { eager: true });
+      const modules = import.meta.glob("../assets/magicus/*.{png,jpg}", { eager: true });
       // Convert to an array of URLs and sort alphabetically
       return Object.keys(modules)
         .sort()
