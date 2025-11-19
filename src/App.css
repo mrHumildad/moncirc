@@ -15,16 +15,17 @@
     "wdth" 100;
   --red: #be1e2d;
   --dark-red: #6a0f18;
-  --blue: #0000ff;
+  --blue: #2020b1;
   --green: #145714;
   --yellow: #dca54a;
   --dark-yellow: #ba8939;
   --white: #ffffff;
   --black: #000000;
-  --orange: #ff7f00;
+  --orange: #aa561e;
   --super-font: 'Bangers', cursive;
   --magicus-font: 'Special Elite', cursive;
   --nadal-font: 'Bigelow Rules', cursive;
+  --nadal-font: 'Mystery Quest', cursive;
   --impro-font: 'Rubik Dirt', cursive;
   --title-font: 'Cheddar', cursive;
 }
@@ -133,7 +134,7 @@ p {
   flex-direction:column;
   background: #ebd426;
   overflow: hidden;
-  background: linear-gradient(115deg, rgba(235, 212, 38, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  background: linear-gradient(115deg, rgb(133, 123, 47) 0%, rgb(201, 153, 49) 100%);
 }
 
 .hero {
@@ -340,18 +341,22 @@ p {
 
 #superLink {
   border: 0.5dvw solid var(--red);
+  background-color: var(--red);
 }
 
 #magicusLink {
   border: 0.5dvw solid var(--blue);
+  background-color: var(--blue);
 }
 
-#improvistosLink {
+#improLink {
   border: 0.5dvw solid var(--orange);
+  background-color: var(--orange);
 }
 
 #nadalLink {
   border: 0.5dvw solid var(--green);
+  background-color: var(--green);
 }
 
 .personaje:hover {
@@ -468,7 +473,9 @@ p {
   }
   .personaje-title-mobile {
     font-size: 4dvh;
-    
+    z-index: 13;
+  text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white), 0 -1px var(--white);
+
   }
   .bottom {
     height: auto;
@@ -476,7 +483,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   .mobile {
     display: block !important;
   }
@@ -536,6 +543,9 @@ p {
 
   .personaje-title-mobile {
     font-size: 40px;
+    z-index: 13;
+  text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white), 0 -1px var(--white);
+
   }
 
   .bottom {

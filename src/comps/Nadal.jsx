@@ -48,7 +48,7 @@ const Nadal = () => {
         </div>
       </div>
       <h3 className="char-subtitle">
-        Espectacles i activitats per fer brillar l’hivern
+        La màgia d'Orient a les Cabalgades!
       </h3>
       <div className="char-main">
         <div className="char-info">
@@ -59,7 +59,7 @@ const Nadal = () => {
           <SwiperComponent pics={[cabalgadaPic, cabalgadaPic, cabalgadaPic]}/>
           </div>
           <p className="char-text">
-            A l’hivern, cada espai es converteix en escenari: fires, carrers, biblioteques i escoles s’omplen de poesia, rialles i esperit festiu. Una proposta ideal per compartir il·lusió i fer delNadal un moment absolutament inoblidable.
+            A l’hivern, cada espai es converteix en escenari: fires, carrers, biblioteques i escoles s’omplen de poesia, rialles i esperit festiu. Una proposta ideal per compartir il·lusió i fer del Nadal un moment absolutament inoblidable.
           </p>
         </div>
         <div className="char-fotos desktop">

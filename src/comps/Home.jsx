@@ -18,6 +18,7 @@ const Home = () => {
   const MAILTO = 'mailto:spaguetiespectacles@gmail.com'
   const TEL = 'tel:+34623240415'
   const WHATSAPP_URL = 'https://wa.me/34623240415'
+  const INSTA ='https://www.instagram.com/urispagueti/'
 
   const scrollToPersonajes = (e) => {
     if (e?.preventDefault) e.preventDefault()

@@ -25,7 +25,7 @@ const Super = () => {
         <img className="char-img-right" src={headPic2} alt="" />
       </div>
       <h3 className="char-subtitle">
-        El superheroi del circ… més inesperat de tots... Què passaria si un pallasso es convertís en superheroi?
+        Què passaria si un pallasso es convertís en Superheroi?
       </h3>
       <div className="char-main">
         <div className="char-fotos desktop">
