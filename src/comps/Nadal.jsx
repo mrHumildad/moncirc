@@ -57,7 +57,7 @@ const Nadal = () => {
             Per a cavalcades i cercaviles nadalenques, Mon Circ ofereix també l’espectacle itinerant Mil i una Nit, amb menjafocs, xanques i una sorprenent catifa voladora: una proposta visual i festiva que omple els carrers de color, fantasia i diversió compartida.
           </p>
           <div className="char-fotos mobile">
-          <SwiperComponent pics={[cabalgadaPic, cabalgadaPic, cabalgadaPic]}/>
+            <img  className='cabalgada_img' src={cabalgadaPic} alt="Cabalgada de Nadal" />
           </div>
           <p className="char-text">
             A l’hivern, cada espai es converteix en escenari: fires, carrers, biblioteques i escoles s’omplen de poesia, rialles i esperit festiu. Una proposta ideal per compartir il·lusió i fer del Nadal un moment absolutament inoblidable.

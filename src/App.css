@@ -133,9 +133,9 @@ p {
 
 .Home{
   color:#111;
+  width: 100dvw;
   display:flex;
   flex-direction:column;
-  background: #ebd426;
   overflow: hidden;
   background: linear-gradient(115deg, rgb(133, 123, 47) 0%, rgb(201, 153, 49) 100%);
 }
