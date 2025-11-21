@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "homepage": "https://mrhumildad.github.io/moncirc",
   "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
