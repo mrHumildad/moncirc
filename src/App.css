@@ -255,15 +255,16 @@ p {
 }
 
 .social-top svg{
-  color:#fff;
+  color:#ffffff86;
   width:4dvw;
   height:4dvw;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
   cursor:pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 .social-top svg:hover{
   transform: scale(1.1);
+  color: #ffffff;
 }
 .subtitle{
   color:rgba(29, 24, 24, 0.95);
@@ -379,8 +380,12 @@ p {
 
 .footer{
   text-align:center;
-  padding:1rem 0;
-  background:linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1em;
 }
 
 .personaje-title {
@@ -430,6 +435,11 @@ p {
   .hero {
     height: 40dvh;
     position: relative;
+  }
+  .social-top svg{
+  color:#ffffff86;
+  width:8dvw;
+  height:8dvw;
   }
   .logo-intro {
   position: absolute;
@@ -483,6 +493,10 @@ p {
   .bottom {
     height: auto;
     margin: 5vw 0;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 

@@ -84,7 +84,6 @@
 .char-main{
   width: 90%;
   margin: auto;
-  padding-left: 1dvw;
   display:flex;
   flex-direction: row;
   align-items: center;
@@ -217,27 +216,77 @@
   border: 0;
 }
 
-.cabalgadas-cont {
-  width: 90%;
-  margin: auto;
-  padding: 2vh 2vw;
-  text-align: center;
-}
-.cabalgada-img {
-  float: right;
-  width: 50%;
+.cabalgada_img{
+  width: 100%;
   height: auto;
-  margin-bottom: 1vh;
+  border-radius: 13px;
+  border: 0.5dvh solid var(--dark-yellow);
+}
+
+
+
+.menu-desktop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 20vh;
+  width: 20vh;
+}
+.menu-button {
+  height: 8vh;
+  width: 8vh;
+  margin: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 0.3vh solid var(--dark-yellow);
+  border-radius: 12%;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+.char-menu-button {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.char-menu-button:hover {
+  filter: grayscale(0%);
+}
+.char-menu {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.open-button {
+  width:7vh;
+  height:7vh;
+  position: relative;
+  svg, img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.menu-mobile {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
 }
 @media only screen and (orientation: portrait) {
+  .menu-button {
+    height: 6vh;
+    width: 6vh;
+  }
   .char-logo{
-    height: 15vh;
+    height: 10vh;
     width: auto;
     padding: 2vh;
     margin:0;
   }
   .char-title{
-    max-width: 35%;
     word-wrap: break-word;
     position: relative;
     transform: none;

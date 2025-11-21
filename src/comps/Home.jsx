@@ -6,7 +6,7 @@ import hero from '../assets/hero.jpg'
 import superCover from '../assets/header/super2.png'
 import magicusCover from '../assets/header/magicus1.png'
 import improCover from '../assets/header/impro1.png'
-import nadalCover from '../assets/covers/nadal.png'
+import nadalCover from '../assets/header/nadal.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareInstagram, faSquareFacebook, faSquareXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faCircleDown, faSquareEnvelope, faSquarePhone } from '@fortawesome/free-solid-svg-icons'
@@ -14,7 +14,6 @@ import { faCircleDown, faSquareEnvelope, faSquarePhone } from '@fortawesome/free
 const Home = () => {
   const navigate = useNavigate()
   const personajesRef = useRef(null)
-  const INSTAGRAM_URL = 'https://www.instagram.com/moncirc/'
   const MAILTO = 'mailto:spaguetiespectacles@gmail.com'
   const TEL = 'tel:+34623240415'
   const WHATSAPP_URL = 'https://wa.me/34623240415'
@@ -79,11 +78,11 @@ const Home = () => {
           <FontAwesomeIcon icon={faSquareXTwitter} /> */}
           <FontAwesomeIcon
             icon={faSquareInstagram}
-            onClick={() => window.open(INSTAGRAM_URL, '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open(INSTA, '_blank', 'noopener,noreferrer')}
             onKeyDown={(e) => {
               if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault()
-                window.open(INSTAGRAM_URL, '_blank', 'noopener,noreferrer')
+                window.open(INSTA, '_blank', 'noopener,noreferrer')
               }
             }}
             role="button"
@@ -166,6 +165,10 @@ const Home = () => {
             </p>
           </div>
         </section>
+        <div className="footer">
+          <span id="foot-mail">spaguetiespectacles@gmail.com</span>
+          <span id="foot-tel">+34 623240415</span>
+        </div>
       </main>
     </div>
   )

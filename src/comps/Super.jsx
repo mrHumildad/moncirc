@@ -1,13 +1,18 @@
-import React from 'react';
+import {useState} from 'react';
 import './char.css';
 import logo from '../assets/logo_yellow.png';
-import headPic1 from '../assets/header/super1.png';
 import headPic2 from '../assets/header/super2.png';
 import { useNavigate } from "react-router-dom";
 import { useMemo } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTableList } from '@fortawesome/free-solid-svg-icons'
 
-import SwiperComponent from './Swiper';
+/* import MenuDesktop from './MenuDesktop.jsx'; */
+import MenuMobile from './MenuMobile.jsx';
+import SwiperComponent from './Swiper.jsx';
+import MenuDesktop from './MenuDesktop.jsx';
 const Super = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const images = useMemo(() => {
     const modules = import.meta.glob("../assets/super/*.{png,jpg}", { eager: true });
     // Convert to an array of URLs and sort alphabetically
@@ -19,9 +24,15 @@ const Super = () => {
   return (
     <div className='char-page' id='super-page'>
       <div id="super-header" className="char-header ">
-        <img src={logo} alt="Mon Circ" className="char-logo" onClick={()=>navigate('/')}/>
-        <h1 id="super-title" className="char-title">SUPER SPAGUETI</h1>
-        {/* <img className="char-img-left" src={headPic2} alt="" /> */}
+        { menuOpen
+          ?<img src={logo} alt="Mon Circ" className="char-logo mobile" onClick={()=>navigate('/')}/> 
+          : (<div className='open-button mobile' onClick={()=>setMenuOpen(true)}>
+              <FontAwesomeIcon icon={faTableList} style={{width:'100%', height:'100%', display: 'block'}}/>
+            </div>)
+        }
+        <MenuDesktop actChar={'super'}/>
+        {!menuOpen && <h1 id="super-title" className="char-title">SUPER SPAGUETI</h1>}
+        {menuOpen && <MenuMobile actChar={'super'} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}
         <img className="char-img-right" src={headPic2} alt="" />
       </div>
       <h3 className="char-subtitle">

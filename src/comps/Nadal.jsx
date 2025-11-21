@@ -49,7 +49,7 @@ const Nadal = () => {
         </div>
       </div>
       <h3 className="char-subtitle">
-        La màgia d'Orient a les Cabalgades!
+        La màgia d'Orient a les Cavalcades!
       </h3>
       <div className="char-main">
         <div className="char-info">
@@ -64,7 +64,7 @@ const Nadal = () => {
           </p>
         </div>
         <div className="char-fotos desktop">
-          <SwiperComponent pics={[cabalgadaPic, cabalgadaPic, cabalgadaPic]}/>
+          <img  className='cabalgada_img' src={cabalgadaPic} alt="Cabalgada de Nadal" />
         </div>
         
       </div>

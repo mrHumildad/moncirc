@@ -10,10 +10,9 @@ import Impro from "./comps/Impro.jsx";
 
 const App = () => {
   const [showSplash, setShowSplash] = useState(true);
-  const basename = import.meta.env.MODE === "production" ? "/uriweb" : "/";
 
   return (
-    <Router basename={basename}>
+    <Router >
       <Scroll2Top />
       {showSplash ? (
         <SplashScreen onFinish={() => setShowSplash(false)} />
