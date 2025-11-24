@@ -102,7 +102,7 @@ const Home = () => {
           <img src={logo} alt="Mon Circ" className="logo-intro" />
           <div className="intro-text">
             <p>
-              Aquí trobaràs tota la informació sobre els meus espectacles i activitats. Si busques
+              Aquí trobaràs tota la informació sobre els meus espectacles i propostes. Si busques
               diversió, rialles i moments inoblidables, has arribat al lloc correcte! baixa per
               descobrir els meus personatges!
             </p>
@@ -154,7 +154,7 @@ const Home = () => {
         <section className="bottom">
           <div className="main-text">
             <p className="parraph">
-              Els espectacles i tallers de Mon Circ destaquen per ser dinàmics, participatius i
+              Els espectacles de Mon Circ destaquen per ser dinàmics, participatius i
               adaptables a qualsevol context: carrers i places, teatres, festivals, esdeveniments
               familiars o programacions culturals. L’objectiu és clar: generar rialles, emoció i
               records inesborrables tant en infants com en adults.

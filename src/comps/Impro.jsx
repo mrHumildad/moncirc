@@ -1,13 +1,18 @@
-import {useMemo} from 'react';
+import {useMemo, useState} from 'react';
 import './char.css';
 import logo from '../assets/logo_yellow.png';
 import { useNavigate } from "react-router-dom";
-import headPic1 from '../assets/header/impro1.png';
-import headPic2 from '../assets/header/impro2.png';
+import headPic2 from '../assets/header/impro1.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTableList } from '@fortawesome/free-solid-svg-icons'
+import MenuMobile from './MenuMobile.jsx';
+import SwiperComponent from './Swiper.jsx';
+import MenuDesktop from './MenuDesktop.jsx';
 // Import images explicitly
 
-import SwiperComponent from './Swiper';
 const Impro = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const images = useMemo(() => {
       const modules = import.meta.glob("../assets/impro/*.{png,jpg}", { eager: true });
       // Convert to an array of URLs and sort alphabetically
@@ -19,11 +24,16 @@ const Impro = () => {
   return (
     <div className='char-page' id='impro-page'>
       <div className="char-header" id ="impro-header">
-        <img src={logo} alt="Mon Circ" className="char-logo" onClick={()=>navigate('/')}/>
-
-        <h1 id="impro-title" className="char-title">IMPRO&#8203;VISTOS</h1>
-        {/* <img className="char-img-left" src={headPic2} alt="" /> */}
-        <img className="char-img-right" src={headPic1} alt="" />
+        { menuOpen
+          ?<img src={logo} alt="Mon Circ" className="char-logo mobile" onClick={()=>navigate('/')}/> 
+          : (<div className='open-button mobile' onClick={()=>setMenuOpen(true)}>
+              <FontAwesomeIcon icon={faTableList} style={{width:'100%', height:'100%', display: 'block'}}/>
+            </div>)
+        }
+        <MenuDesktop actChar={'impro'}/>
+        {!menuOpen && <h1 id="impro-title" className="char-title">IMPRO&#8203;VISTOS</h1>}
+        {menuOpen && <MenuMobile actChar={'impro'} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}
+        <img className="char-img-right" src={headPic2} alt="" />
       </div>
       <h3 className="char-subtitle">
         Clown itinerant per carrers i festes... Un reguitzell de personatges insòlits

@@ -6,8 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { useMemo } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTableList } from '@fortawesome/free-solid-svg-icons'
-
-/* import MenuDesktop from './MenuDesktop.jsx'; */
 import MenuMobile from './MenuMobile.jsx';
 import SwiperComponent from './Swiper.jsx';
 import MenuDesktop from './MenuDesktop.jsx';

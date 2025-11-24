@@ -1,13 +1,16 @@
-import {useMemo} from 'react';
+import {useMemo, useState} from 'react';
 import './char.css';
 import logo from '../assets/logo_yellow.png';
 import { useNavigate } from "react-router-dom";
-import headPic1 from '../assets/header/magicus1.png';
-import headPic2 from '../assets/header/magicus2.png';
-// Import images explicitly
+import headPic2 from '../assets/header/magicus1.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTableList } from '@fortawesome/free-solid-svg-icons'
+import MenuMobile from './MenuMobile.jsx';
+import SwiperComponent from './Swiper.jsx';
+import MenuDesktop from './MenuDesktop.jsx';
 
-import SwiperComponent from './Swiper';
 const Magicus = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const images = useMemo(() => {
       const modules = import.meta.glob("../assets/magicus/*.{png,jpg}", { eager: true });
       // Convert to an array of URLs and sort alphabetically
@@ -19,10 +22,16 @@ const Magicus = () => {
   return (
     <div className='char-page' id='magicus-page'>
       <div className="char-header" id ="magicus-header">
-        <img src={logo} alt="Mon Circ" className="char-logo" onClick={()=>navigate('/')}/>
-        <h1 id="magicus-title" className="char-title">MON MÀGIA</h1>
-        {/* <img className="char-img-left" src={headPic2} alt="" /> */}
-        <img className="char-img-right" src={headPic1} alt="" />
+        { menuOpen
+          ?<img src={logo} alt="Mon Circ" className="char-logo mobile" onClick={()=>navigate('/')}/> 
+          : (<div className='open-button mobile' onClick={()=>setMenuOpen(true)}>
+              <FontAwesomeIcon icon={faTableList} style={{width:'100%', height:'100%', display: 'block'}}/>
+            </div>)
+        }
+        <MenuDesktop actChar={'magicus'}/>
+        {!menuOpen && <h1 id="magicus-title" className="char-title">Mágic</h1>}
+        {menuOpen && <MenuMobile actChar={'magicus'} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}
+        <img className="char-img-right" src={headPic2} alt="" />
       </div>
       <h3 className="char-subtitle">
         Trucs que no surten, trucs que surten al revés i trucs que, de vegades, sí que surten…

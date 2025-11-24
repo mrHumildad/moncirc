@@ -270,6 +270,12 @@
     object-fit: contain;
   }
 }
+
+.text-link{
+  color: inherit;
+  text-decoration: underline;
+}
+
 .menu-mobile {
   display: flex;
   flex-direction: row;
