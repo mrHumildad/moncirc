@@ -29,7 +29,7 @@ const Magicus = () => {
             </div>)
         }
         <MenuDesktop actChar={'magicus'}/>
-        {!menuOpen && <h1 id="magicus-title" className="char-title">Mágic</h1>}
+        {!menuOpen && <h1 id="magicus-title" className="char-title">MON MÀGIA</h1>}
         {menuOpen && <MenuMobile actChar={'magicus'} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>}
         <img className="char-img-right" src={headPic2} alt="" />
       </div>

@@ -89,10 +89,10 @@ p {
   text-wrap: pretty;
 }
 
-span {
+/* span {
   font-size: var(--fs-span);
   line-height: var(--lh-span);
-}
+} */
 body,html,#root{
   height:100%;
   margin:0;
@@ -354,8 +354,8 @@ p {
 }
 
 #improLink {
-  border: 0.5dvw solid var(--orange);
-  background-color: var(--orange);
+  border: 0.5dvw solid rgb(113 35 12);;
+  background-color: rgb(113 35 12);;
 }
 
 #nadalLink {

@@ -46,7 +46,7 @@ const Nadal = () => {
         <div className="char-info"> 
           <p className='char-text'>Quan arriba el fred i els llums de Nadal, Mon Circ es transforma per portar màgia, humor i alegria a tots els racons. Spagueti es reinventa amb un toc festiu ple de tendresa, mentre que els personatges itinerants —absurds, poètics i sorprenents— apareixen entre parades, mercats i carrers il·luminats, convertint qualsevol espai en un escenari viu i vibrant.</p>
           <p className="char-text">
-            Els <a className='text-link' href="/impro">personatges itinerants</a> es poden combinar en pack amb un espectacle de <a className='text-link' href="/super">màgia còmica</a>, o amb el mateix <a className='text-link' href="/super">Super Spagueti</a>, creant una experiència completa que uneix circ familiar, màgia nadalenca i humor per a tots els públics.
+            Els <span className='text-link' onClick={()=>navigate('/impro')}>personatges itinerants</span> es poden combinar en pack amb un espectacle de <span className='text-link' onClick={()=>navigate('/magicus')}>màgia còmica</span>, o amb el mateix <a className='text-link' onClick={()=>navigate('/super')}>Super Spagueti</a>, creant una experiència completa que uneix circ familiar, màgia nadalenca i humor per a tots els públics.
           </p> 
           <p className="char-text">
             Per sumar-hi encara més encant, el Pare Noel pot fer una visita especial als nens i nenes, tant la nit com el dia de Nadal, portant il·lusió, proximitat i un toc de màgia inoblidable.

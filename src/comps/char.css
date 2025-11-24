@@ -16,6 +16,7 @@
 }
 #impro-page {
   background: linear-gradient(115deg, rgb(99, 54, 54) 0%, rgb(170, 49, 12) 100%);
+
   color: var(--dark-yellow);
 }
 #nadal-page {
@@ -43,7 +44,7 @@
 }
 
 #impro-header {
-  background-color: rgb(43, 12, 3);
+  background-color: rgb(113 35 12);
   color: var(--dark-yellow);
 }
 
