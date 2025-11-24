@@ -9,12 +9,13 @@
   background: linear-gradient(115deg,rgb(177, 171, 128) 0%, rgba(253, 187, 45, 1) 100%);;
   color: var(--dark-red);
 }
+
 #magicus-page {
-  background: linear-gradient(115deg, rgba(173, 216, 230, 1) 0%, rgba(135, 206, 235, 1) 100%);
+  background: linear-gradient(115deg, rgb(90, 52, 228) 0%, rgb(14, 0, 75) 100%);
   color: var(--dark-yellow);
 }
 #impro-page {
-  background: linear-gradient(115deg, rgb(57, 90, 57) 0%, rgb(25, 114, 65) 100%);
+  background: linear-gradient(115deg, rgb(99, 54, 54) 0%, rgb(170, 49, 12) 100%);
   color: var(--dark-yellow);
 }
 #nadal-page {
@@ -42,12 +43,12 @@
 }
 
 #impro-header {
-  background-color: var(--green);
+  background-color: rgb(43, 12, 3);
   color: var(--dark-yellow);
 }
 
 #magicus-header {
-  background-color: var(--blue);
+  background-color: rgb(14, 0, 75);
   color: var(--dark-yellow);
 }
 .char-title{
