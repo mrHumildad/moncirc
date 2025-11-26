@@ -168,6 +168,7 @@ const Home = () => {
         <div className="footer">
           <span id="foot-mail">spaguetiespectacles@gmail.com</span>
           <span id="foot-tel">+34 623240415</span>
+          <span id="foot-copyright">© 2023 Mon Circ</span>
         </div>
       </main>
     </div>
