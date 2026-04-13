@@ -93,7 +93,7 @@ const Home = () => {
         </div>
         <div className="hero-overlay" aria-hidden="true" />
         <div className="hero-content">
-          <h1 className="title">ESPECTACLES I SOMRIURES PER TOTHOM</h1>
+          <h1 className="title">espectacles i somriures per a tothom</h1>
         </div>
       </header>
 

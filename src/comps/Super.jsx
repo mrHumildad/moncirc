@@ -55,7 +55,15 @@ const Super = () => {
           </p>
         </div>
       </div>
-
+        <div className="video-wrapper">
+  <iframe
+    src=" https://www.youtube.com/embed/oFEzJEkelL8?si=65BbbFFs4BYgJFZ_"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  ></iframe>
+</div>
     <div className="data-char">
       <span className="data-block"><span className="data-key">Durada: </span><span className="data-value">50 minuts</span></span>
       <span className="data-block"><span className="data-key">Públic: </span><span className="data-value">Familiar</span></span>
@@ -69,3 +77,4 @@ const Super = () => {
 
 export default Super;
 
+// https://www.youtube.com/embed/oFEzJEkelL8?si=65BbbFFs4BYgJFZ_

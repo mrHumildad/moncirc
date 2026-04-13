@@ -233,7 +233,6 @@ p {
   margin:auto;
   /* font-size:clamp(1.25rem, 5dvw, 2.25rem); */
   letter-spacing:0.02em;
-  text-transform:uppercase;
   text-shadow:0 8px 28px rgba(0,0,0,0.45);
   font-family: var(--title-font);
   font-weight: 400;
